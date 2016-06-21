@@ -1,0 +1,26 @@
+{
+  "name": "pem-to-jwk",
+  "version": "1.0.0",
+  "description": "A tool to convert PEM formated EC keys to JWK",
+  "main": "index.js",
+  "bin" : { "pem-to-jwk" : "./cli.js" },
+  "dependencies": {
+    "bn.js": "^4.11.4",
+    "asn1.js": "^4.6.2",
+    "elliptic": "^6.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/callstats-io/pem-to-jwk.git"
+  },
+  "author": "Eljas Alakulppi <eljas@callstats.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/callstats-io/pem-to-jwk/issues"
+  },
+  "homepage": "https://github.com/callstats-io/pem-to-jwk#readme"
+}
