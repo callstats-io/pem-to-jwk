@@ -9,3 +9,8 @@ cat ecpriv.key | pem-to-jwk > jwk.json
 # PKCS8 EC PEM key to JWK
 openssl pkcs8 -in ecpriv.key -inform pem -nocrypt -topk8 | pem-to-jwk > jwk.json
 ```
+
+## Docker usage
+```
+docker run --rm callstats/pem-to-jwk openssl ecparam -name prime256v1 -genkey | docker run -i --rm callstats/pem-to-jwk
+```
