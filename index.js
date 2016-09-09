@@ -91,8 +91,8 @@ var generateJwk = function (curve, privateKey, publicKey, callback) {
     jwk.d = base64urlencode(new Buffer(privateKey, 'hex'));
     if (publicKey.readInt8(0) === 4) {
         // Uncompressed key
-        jwk.x = base64urlencode(publicKey.slice(1, 32));
-        jwk.y = base64urlencode(publicKey.slice(33, 65));
+        jwk.x = base64urlencode(publicKey.slice(1, 33));
+        jwk.y = base64urlencode(publicKey.slice(33, 66));
     } else if (publicKey.readInt8(0) == 2 && publicKey.readInt8(0) == 3) {
         // Compressed key
         callback("Compressed public keys are not supported", jwk);
